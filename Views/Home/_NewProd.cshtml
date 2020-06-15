@@ -1,0 +1,14 @@
+@model Product
+<h1 class="display-4">New Product</h1>
+<form asp-action="NewProd" asp-controller="Home" method="POST">
+        <span asp-validation-for="Name"></span> <br>
+        <label asp-for="Name"></label>
+        <input asp-for="Name"> <br>
+        <span asp-validation-for="Description"></span> <br>
+        <label asp-for="Description"></label>
+        <input asp-for="Description"> <br>
+        <span asp-validation-for="Price"></span> <br>
+        <label asp-for="Price"></label>
+        <input asp-for="Price"> <br>
+        <button class="btn btn-dark">Create</button>
+    </form>

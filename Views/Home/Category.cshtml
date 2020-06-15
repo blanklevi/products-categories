@@ -1,0 +1,18 @@
+@model Category
+<div class="text-center">
+    <h1>@Model.Name</h1>
+    <h3>Products:</h3>
+    <ul>
+        @foreach(var prod in Model.Products)
+        {
+            <li>@prod.Product.Name</li>
+        }
+    </ul>
+    @{
+        Association newAss = new Association()
+        {
+            CategoryId = Model.CategoryId
+        };
+    }
+    <partial name="_AddProd" model="@newAss"></partial>
+</div>

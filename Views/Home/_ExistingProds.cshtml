@@ -1,0 +1,10 @@
+<h1 class="display-4">Existing Products</h1>
+@foreach(Product prod in ViewBag.AllProducts)
+{
+    <a 
+        asp-controller="Home" 
+        asp-action="Product" 
+        asp-route-prodId="@prod.ProductId"
+        >@prod.Name
+    </a>
+}

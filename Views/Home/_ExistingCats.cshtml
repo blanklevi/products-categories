@@ -1,0 +1,8 @@
+<h1 class="display-4">Existing Categories</h1>
+    @foreach(Category cat in ViewBag.AllCategories)
+    {
+    <a 
+        asp-controller="Home" 
+        asp-action="Category"
+        asp-route-catId="@cat.CategoryId">@cat.Name</a>
+    }
